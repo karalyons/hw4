@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
         session["user_id"] = @user["id"]
         redirect_to "/places"
       else
-        flash["notice"] = "No!"
+        flash["notice"] = "Try different login credentials!"
         redirect_to "/login"
       end
     else
