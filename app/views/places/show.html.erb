@@ -12,10 +12,17 @@
       <h3><%= post["title"] %></h3>
       <h4><%= post["posted_on"] %></h4>
       <p><%= post["description"] %></p>
+       <p> 
+       <% if post.uploaded_image.attached? %>
+        <img src="<%= url_for(post.uploaded_image) %>" class="img-fluid">
+      <% else %>
+        <img src="<%= post["image"] %>" class="img-fluid">
+      <% end %>
+      </p>
     </div>
   <% end %>
 </div>
 
-<p>
+<div>
   <a href="/places" class="btn btn-outline-primary">Back to All Places</a>
-</p>
+</div>
