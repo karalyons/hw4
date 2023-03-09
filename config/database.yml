@@ -23,7 +23,7 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: software-susan_production
-  username: software-susan
-  password: <%= ENV["SOFTWARE-SUSAN_DATABASE_PASSWORD"] %>
+  database: software_susan_production
+  username: software_susan
+  password: <%= ENV["SOFTWARE_SUSAN_DATABASE_PASSWORD"] %>
 
