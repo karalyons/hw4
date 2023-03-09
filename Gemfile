@@ -14,10 +14,11 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
-group :development do 
+group :development do
   gem "sqlite3", "~> 1.4"
- end
- 
- group :production do
-   gem 'pg'
- end
+  gem "tabulo"
+  gem "web-console"
+end
+group :production do
+  gem "pg"
+end
